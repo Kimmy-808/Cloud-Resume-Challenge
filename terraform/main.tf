@@ -24,7 +24,7 @@ resource "aws_dynamodb_table" "portfolio_traffic" {
 }
 resource "aws_dynamodb_table_item" "counter_item" {
   table_name = aws_dynamodb_table.portfolio_traffic.name
-  hash_key   = aws_dynamodb_table.portfolio_traffic.hash_key
+  hash_key = "id"
 
   item = jsonencode({
     id    = { S = "visits" }
