@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hi! I'm Kimberly!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Fonts: Playfair Display (title) + DM Sans (body) -->
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700&family=Playfair+Display:wght@600;800;900&family=Great+Vibes&display=swap" rel="stylesheet" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at top left, #ff4ec2 0, #2b0b45 40%, #050013 100%);
+      color: #fdf5ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-wrapper {
+      max-width: 1200px;
+      width: 100%;
+      padding: 40px 24px;
+    }
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .hero-text {
+      flex: 1 1 340px;
+    }
+
+    .hero-eyebrow {
+      font-size: 0.9rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #ffb3ff;
+      opacity: 0.9;
+      margin-bottom: 10px;
+    }
+
+.hero-title {
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-size: clamp(4rem, 10vw, 9rem);
+  white-space: nowrap; /* keeps it on ONE line */
+  color: #ffe6ff;
+  line-height: 1.05;
+  letter-spacing: 0.04em;
+
+  text-shadow:
+    0 0 20px rgba(255, 105, 220, 0.95),
+    0 0 40px rgba(200, 90, 255, 0.90),
+    0 0 85px rgba(255, 150, 255, 0.85),
+    0 0 140px rgba(255, 180, 255, 0.70);
+
+  margin-bottom: 32px;
+}
+
+
+      margin-bottom: 18px;
+    }
+
+    .hero-title span {
+      display: block;
+    }
+
+    .hero-subtitle {
+      font-size: 1.05rem;
+      max-width: 520px;
+      line-height: 1.7;
+      color: #f4ddff;
+      opacity: 0.95;
+    }
+
+    .hero-subtitle span {
+      color: #ff8ef4;
+      font-weight: 600;
+    }
+
+    .hero-photo {
+      flex: 0 0 260px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-photo-inner {
+      position: relative;
+    }
+
+    .hero-photo-inner::before {
+      content: "";
+      position: absolute;
+      inset: -20px;
+      border-radius: 999px;
+      background: conic-gradient(from 200deg, #ff4ec2, #c77dff, #ffea00, #ff4ec2);
+      filter: blur(12px);
+      opacity: 0.9;
+      z-index: 0;
+    }
+
+    .hero-photo-inner img {
+      position: relative;
+      z-index: 1;
+      width: 240px;
+      height: 240px;
+      border-radius: 999px;
+      object-fit: cover;
+      box-shadow:
+        0 0 22px rgba(255, 0, 188, 0.85),
+        0 0 55px rgba(95, 0, 255, 0.9);
+    }
+
+    @media (max-width: 768px) {
+      body {
+        align-items: flex-start;
+      }
+
+      .hero-wrapper {
+        padding-top: 32px;
+      }
+
+      .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+
+      .hero-subtitle {
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="hero-wrapper">
+    <section class="hero">
+      <div class="hero-text">
+        <div class="hero-eyebrow">cloud computing student</div>
+
+  <h1 class="hero-title">Hi! I'm Kimberly!</h1>
+
+        <p class="hero-subtitle">
+          I’m a <span>cloud computing student specializing in AWS</span> with a background in SaaS consulting, analytics, and workflow improvement. I enjoy creating reliable cloud setups, solving technical issues, and helping systems work more efficiently.
+        </p>
+      </div>
+
+      <div class="hero-photo">
+        <div class="hero-photo-inner">
+          <!-- change "my-photo.jpg" to your actual file name if needed -->
+          <img src="my-photo.jpg" alt="Photo of Kimberly" />
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
