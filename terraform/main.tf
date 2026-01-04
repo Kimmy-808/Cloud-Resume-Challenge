@@ -12,3 +12,13 @@ terraform {
 provider "aws" {
   region = var.aws_region
 }
+resource "aws_dynamodb_table" "portfolio_traffic" {
+  name         = "portfolio_traffic"
+  billing_mode = "PAY_PER_REQUEST"
+  hash_key     = "id"
+
+  attribute {
+    name = "id"
+    type = "S"
+  }
+}
