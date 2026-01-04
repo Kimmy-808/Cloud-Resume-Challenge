@@ -22,3 +22,12 @@ resource "aws_dynamodb_table" "portfolio_traffic" {
     type = "S"
   }
 }
+resource "aws_dynamodb_table_item" "counter_item" {
+  table_name = aws_dynamodb_table.portfolio_traffic.name
+  hash_key   = aws_dynamodb_table.portfolio_traffic.hash_key
+
+  item = jsonencode({
+    id    = { S = "visits" }
+    count = { N = "0" }
+  })
+}
