@@ -107,7 +107,7 @@
       justify-content: flex-start;
       align-items: flex-start;
       margin-top: 0;
-      transform: translateY(-80px) translateX(40px);
+      transform: translateY(-150px) translateX(40px);
     }
 
     .hero-photo-inner {
